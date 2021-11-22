@@ -1,0 +1,23 @@
+`timescale 1ns / 1ps
+
+
+module test_bench;
+reg [1:0] aa;
+reg A,B,C,D;
+wire  y;
+
+mux_4to1 u_inv(aa[1],aa[0],A,B,C,D,y);
+
+initial assign A=1'b1;
+initial assign B=1'b0;
+initial assign C=1'b1;
+initial assign D=1'b0;
+
+initial aa[1:0] = 2'b00;
+always aa[1:0]= #100 aa[1:0] +2'b01;
+
+initial begin
+        #400
+        $finish;
+end
+endmodule

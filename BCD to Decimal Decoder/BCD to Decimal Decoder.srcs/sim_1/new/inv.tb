@@ -1,0 +1,17 @@
+`timescale 1ns / 1ps
+
+
+module test_bench;
+reg [3:0] aa;
+wire  A0,A1,A2,A3,A4,A5,A6,A7,A8,A9;
+
+bcd_demical_encoder u_inv(aa[3],aa[2],aa[1],aa[0],A0,A1,A2,A3,A4,A5,A6,A7,A8,A9);
+
+initial aa[3:0] = 4'b0000;
+always aa[3:0]= #100 aa[3:0] +4'b0001;
+
+initial begin
+        #1600
+        $finish;
+end
+endmodule

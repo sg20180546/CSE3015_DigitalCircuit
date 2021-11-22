@@ -1,0 +1,17 @@
+`timescale 1ns / 1ps
+
+
+module test_bench;
+reg [3:0] aa;
+wire a,b,c,d,e,f,g;
+
+segment_7_display u_inv(aa[3],aa[2],aa[1],aa[0],a,b,c,d,e,f,g);
+
+initial aa[3:0] = 4'b0000;
+always aa[3:0]= #100 aa[3:0] +4'b0001;
+
+initial begin
+        #1600
+        $finish;
+end
+endmodule
