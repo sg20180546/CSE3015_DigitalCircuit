@@ -9,7 +9,7 @@ down_async inv(c,AA);
 initial c=1'b0;
 //initial TT=0;
 //always TT= #200 ~TT;
-always #100 c=~c;
+always #25 c=~c;
 initial begin
         #1000
         $finish;

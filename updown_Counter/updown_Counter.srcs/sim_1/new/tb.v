@@ -9,7 +9,7 @@ updown uc(ud,clk,res,num);
 initial begin
     clk=0;
     ud=1;
-    res=1;
+    res=0;
 end
 always #25 clk=~clk;
 
@@ -17,7 +17,7 @@ initial begin
     #600
     ud=0;
     #200
-    res=0;
+    res=1;
     #200
     $finish;
 end

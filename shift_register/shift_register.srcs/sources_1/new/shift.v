@@ -8,10 +8,10 @@ wire [2:0] tempOut;
 wire [3:0] notq;
 
 
-assign tempIn[0]= in&reset;
-assign tempIn[1]= tempOut[0]&reset;
-assign tempIn[2]= tempOut[1]&reset;
-assign tempIn[3]= tempOut[2]&reset;
+assign tempIn[0]= in&~reset;
+assign tempIn[1]= tempOut[0]&~reset;
+assign tempIn[2]= tempOut[1]&~reset;
+assign tempIn[3]= tempOut[2]&~reset;
 
 D_FF d1(tempIn[0],clock,tempOut[0],notq[0]);
 D_FF d2(tempIn[1],clock,tempOut[1],notq[1]);
