@@ -6,11 +6,13 @@ initial v=0;
 
 always @ (posedge(clock)) begin
     if(~reset)
-        v<=0;
+        v=0;
      else if(v==9)
-            v<=0;
+            v=0;
      else
-        v<=v+1;
+        $display(v);
+        $monitor(v);
+        v=v+1;
 end
 
 assign y=v;

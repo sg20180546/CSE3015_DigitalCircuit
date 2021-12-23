@@ -1,10 +1,11 @@
-`timescale 1ns / 1ps
-module full_adder(a,b,carryin,sum,carryout) ;
+`timescale 1ns/1ps
+
+
+module full_adder(a,b,carry,in,sum,carryout);
 input a,b,carryin;
-wire a,b,carryin;
 
 output sum,carryout;
-wire sum,carryout;
+wire a,b,carryin;
 
 wire x1,a1,a2;
 
@@ -14,5 +15,4 @@ assign a2=x1&carryin;
 assign sum=x1^carryin;
 assign carryout=a2|a1;
 
-
-endmodule
+endmodule;

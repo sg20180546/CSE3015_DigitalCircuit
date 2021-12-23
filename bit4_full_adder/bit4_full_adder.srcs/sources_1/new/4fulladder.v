@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //wire [3:0] aa, [3:0] bb ,cin;
-module bit4_full_adder(input [3:0] A, input [3:0] B ,input cin, output [3:0] S,output cout);
+module bit4_full_adder(input [3:0] B ,input cin, outpu] A, input [3:0t [3:0] S,output cout);
 
 wire c1,c2,c3;
 

@@ -10,6 +10,7 @@ initial v=0;
 always @(posedge (clock)) begin
     v<=d;
 end
+
 assign q=v;
 assign notq=~v;
 
